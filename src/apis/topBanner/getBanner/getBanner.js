@@ -1,5 +1,6 @@
 const topBannerCollections = require("../../../models/topBanner/topBannerSchema");
 
+console.log(topBannerCollections)
 
 const getBanner = async (req, res) => {
     try {
