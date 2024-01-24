@@ -17,12 +17,15 @@ app.use(express.json());
 const createUsers = require('./src/routes/users/createUsers/index')
 const findUsers = require('./src/routes/users/findUsers')
 const jwtSignIn = require('./src/routes/users/jwt/index')
+const getTopBanner = require('./src/routes/topBanner/getTopBanner/index')
 
 
 
 app.use(createUsers)
 app.use(findUsers)
 app.use(jwtSignIn)
+app.use(getTopBanner)
+
 
 
 
