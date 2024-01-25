@@ -7,7 +7,7 @@ const createUser = async (req, res) => {
 
         const query = { email: user.email }
         const existingUser = await userCollections.findOne(query);
-        console.log(user)
+        // console.log(user)
         if (existingUser) {
             return res.send({ massage: 'user already exist', insertedId: null })
         }
