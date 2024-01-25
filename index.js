@@ -18,13 +18,14 @@ const createUsers = require('./src/routes/users/createUsers/index')
 const findUsers = require('./src/routes/users/findUsers')
 const jwtSignIn = require('./src/routes/users/jwt/index')
 const getTopBanner = require('./src/routes/topBanner/getTopBanner/index')
-
+const payment = require('./src/routes/payment/payment');
 
 
 app.use(createUsers)
 app.use(findUsers)
 app.use(jwtSignIn)
 app.use(getTopBanner)
+app.use(payment);
 
 
 
