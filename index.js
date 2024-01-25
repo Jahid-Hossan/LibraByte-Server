@@ -16,10 +16,11 @@ app.use(express.json());
 
 const createUsers = require('./src/routes/users/createUsers/index')
 const findUsers = require('./src/routes/users/findUsers/findUsers')
-
+const getBooks=require('./src/routes/books/index')
 
 app.use(createUsers)
-app.use(findUsers)
+app.use(findUsers);
+app.use(getBooks);
 
 
 
