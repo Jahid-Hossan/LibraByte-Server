@@ -18,16 +18,19 @@ const createUsers = require('./src/routes/users/createUsers/index')
 const findUsers = require('./src/routes/users/findUsers')
 const jwtSignIn = require('./src/routes/users/jwt/index')
 const getTopBanner = require('./src/routes/topBanner/getTopBanner/index')
+const payment = require('./src/routes/payment/payment');
+
 const getBlogPost = require('./src/routes/blogPost//getBlogPost/index')
 const postBlogPost = require('./src/routes/blogPost/postBlogPost/index')
 
-const getBooks=require('./src/routes/books/index')
+const getBooks = require('./src/routes/books/index')
 
 app.use(createUsers)
 app.use(findUsers);
 app.use(getBooks);
 app.use(jwtSignIn)
 app.use(getTopBanner)
+app.use(payment);
 app.use(getBlogPost)
 app.use(postBlogPost)
 
