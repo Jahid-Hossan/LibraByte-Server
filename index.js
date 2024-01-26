@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors({
     origin: [
         "http://localhost:3000",
+        "https://libra-byte-g2a1g6n9i-isalim079.vercel.app",
+        "https://libra-byte.vercel.app"
     ]
 }));
 app.use(express.json());
