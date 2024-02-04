@@ -26,7 +26,7 @@ const getBlogPost = require('./src/routes/blogPost//getBlogPost/index')
 const postBlogPost = require('./src/routes/blogPost/postBlogPost/index')
 
 const getBooks = require('./src/routes/books/index')
-
+const borrowBooks=require('./src/routes/borrow/postBorrow/index')
 app.use(createUsers)
 app.use(findUsers);
 app.use(getBooks);
@@ -35,6 +35,7 @@ app.use(getTopBanner)
 app.use(payment);
 app.use(getBlogPost)
 app.use(postBlogPost)
+app.use(borrowBooks)
 
 
 
