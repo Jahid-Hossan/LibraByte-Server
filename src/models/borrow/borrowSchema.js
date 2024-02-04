@@ -4,6 +4,7 @@ const borrowBookSchema = new Schema({
    
     Book_name: {type: String} ,
     Book_image: {type: String},
+    Book_author: {type: String},
     Date: {type: String},
     borrower_email: {type: String},
     borrower_name:{type: String},
