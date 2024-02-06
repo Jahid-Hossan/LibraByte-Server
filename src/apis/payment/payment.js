@@ -2,7 +2,7 @@
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-console.log(process.env.STRIPE_SECRET_KEY, 'here')
+// console.log(process.env.STRIPE_SECRET_KEY, 'here')
 
 const payments = async (req, res) => {
     try {
