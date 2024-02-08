@@ -28,7 +28,11 @@ const postBlogPost = require("./src/routes/blogPost/postBlogPost/index");
 
 const getBooks = require("./src/routes/books/index");
 const borrowBooks = require("./src/routes/borrow/postBorrow/index");
-const getBorrow = require("./src/apis/borrowBooks/getBorrowBooks/getBorrow");
+const getBorrowBooks = require('./src/routes/borrow/getBorrow/index')
+const patchBorrow = require('./src/routes/borrow/patchBorrow/index')
+const patchDeliver = require('./src/routes/borrow/patchDeliver/patchDeliver')
+const testFol = require('./src/routes/testFol/index')
+
 
 app.use(createUsers);
 app.use(findUsers);
@@ -39,7 +43,11 @@ app.use(payment);
 app.use(getBlogPost);
 app.use(postBlogPost);
 app.use(borrowBooks);
-app.use(getBorrow);
+app.use(getBorrowBooks);
+app.use(patchBorrow)
+app.use(patchDeliver)
+
+app.use(testFol)
 
 //*****Error handling *****//
 
