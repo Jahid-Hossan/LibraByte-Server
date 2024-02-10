@@ -28,8 +28,17 @@ const postBlogPost = require("./src/routes/blogPost/postBlogPost/index");
 
 const getBooks = require("./src/routes/books/index");
 const borrowBooks = require("./src/routes/borrow/postBorrow/index");
+<<<<<<< HEAD
 const getBorrow = require("./src/apis/borrowBooks/getBorrowBooks/getBorrow");
 const postwishlist =require("./src/routes/wishlist/postWishlist/index")
+=======
+const getBorrowBooks = require('./src/routes/borrow/getBorrow/index')
+const patchBorrow = require('./src/routes/borrow/patchBorrow/index')
+const patchDeliver = require('./src/routes/borrow/patchDeliver/patchDeliver')
+const testFol = require('./src/routes/testFol/index')
+
+
+>>>>>>> 8e538500679a539af9aa735de4728bdb781654bb
 app.use(createUsers);
 app.use(findUsers);
 app.use(getBooks);
@@ -39,9 +48,17 @@ app.use(payment);
 app.use(getBlogPost);
 app.use(postBlogPost);
 app.use(borrowBooks);
+<<<<<<< HEAD
 app.use(getBorrow);
 app.use(postwishlist);
 
+=======
+app.use(getBorrowBooks);
+app.use(patchBorrow)
+app.use(patchDeliver)
+
+app.use(testFol)
+>>>>>>> 8e538500679a539af9aa735de4728bdb781654bb
 
 //*****Error handling *****//
 
