@@ -33,6 +33,7 @@ const patchBorrow = require('./src/routes/borrow/patchBorrow/index')
 const patchDeliver = require('./src/routes/borrow/patchDeliver/patchDeliver')
 const testFol = require('./src/routes/testFol/index')
 const patchReturn = require('./src/routes/borrow/pathcReturn/index')
+const patchUserRole = require('./src/routes/users/updateUserRole/index')
 
 
 app.use(createUsers);
@@ -48,6 +49,7 @@ app.use(getBorrowBooks);
 app.use(patchBorrow)
 app.use(patchDeliver)
 app.use(patchReturn)
+app.use(patchUserRole)
 
 app.use(testFol)
 
