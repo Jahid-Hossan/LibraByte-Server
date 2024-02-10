@@ -29,7 +29,7 @@ const postBlogPost = require("./src/routes/blogPost/postBlogPost/index");
 const getBooks = require("./src/routes/books/index");
 const borrowBooks = require("./src/routes/borrow/postBorrow/index");
 const getBorrow = require("./src/apis/borrowBooks/getBorrowBooks/getBorrow");
-
+const postwishlist =require("./src/routes/wishlist/postWishlist/index")
 app.use(createUsers);
 app.use(findUsers);
 app.use(getBooks);
@@ -40,6 +40,8 @@ app.use(getBlogPost);
 app.use(postBlogPost);
 app.use(borrowBooks);
 app.use(getBorrow);
+app.use(postwishlist);
+
 
 //*****Error handling *****//
 
