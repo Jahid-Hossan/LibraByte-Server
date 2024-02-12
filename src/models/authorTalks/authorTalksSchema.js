@@ -6,7 +6,8 @@ const authorTalksSchema = new Schema(
         authorName: {type: String},
         authorEmail: {type: String},
         authorTitle: {type: String},
-        authorPost: {type: String}
+        authorPost: {type: String},
+        authorHashTag: {type: Object},
     }
 )
 
