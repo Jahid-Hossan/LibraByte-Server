@@ -35,6 +35,9 @@ const testFol = require('./src/routes/testFol/index')
 const patchReturn = require('./src/routes/borrow/pathcReturn/index')
 const patchUserRole = require('./src/routes/users/updateUserRole/index')
 const deleteUser = require('./src/routes/users/deleteUser/index')
+const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
+const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
+const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
 
 
 app.use(createUsers);
@@ -52,6 +55,9 @@ app.use(patchDeliver)
 app.use(patchReturn)
 app.use(patchUserRole)
 app.use(deleteUser)
+app.use(deleteBlogPostData)
+app.use(postAuthorTalksData)
+app.use(getAuthorTalksData)
 
 app.use(testFol)
 
