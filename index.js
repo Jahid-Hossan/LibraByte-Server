@@ -35,6 +35,14 @@ const testFol = require('./src/routes/testFol/index')
 const postwish=require('./src/routes/wishlist/postWishlist/index')
 const getwish=require('./src/routes/wishlist/getWishlist/index')
 const removeWish=require('./src/routes/wishlist/deleteWishlist/index')
+const patchReturn = require('./src/routes/borrow/pathcReturn/index')
+const patchUserRole = require('./src/routes/users/updateUserRole/index')
+const deleteUser = require('./src/routes/users/deleteUser/index')
+const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
+const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
+const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
+
+
 app.use(createUsers);
 app.use(findUsers);
 app.use(getBooks);
@@ -47,6 +55,13 @@ app.use(borrowBooks);
 app.use(getBorrowBooks);
 app.use(patchBorrow)
 app.use(patchDeliver)
+app.use(patchReturn)
+app.use(patchUserRole)
+app.use(deleteUser)
+app.use(deleteBlogPostData)
+app.use(postAuthorTalksData)
+app.use(getAuthorTalksData)
+
 app.use(testFol)
 app.use(postwish)
 app.use(getwish)
