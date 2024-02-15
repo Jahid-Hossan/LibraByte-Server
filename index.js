@@ -32,6 +32,12 @@ const getBorrowBooks = require('./src/routes/borrow/getBorrow/index')
 const patchBorrow = require('./src/routes/borrow/patchBorrow/index')
 const patchDeliver = require('./src/routes/borrow/patchDeliver/patchDeliver')
 const testFol = require('./src/routes/testFol/index')
+const patchReturn = require('./src/routes/borrow/pathcReturn/index')
+const patchUserRole = require('./src/routes/users/updateUserRole/index')
+const deleteUser = require('./src/routes/users/deleteUser/index')
+const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
+const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
+const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
 
 
 app.use(createUsers);
@@ -46,6 +52,12 @@ app.use(borrowBooks);
 app.use(getBorrowBooks);
 app.use(patchBorrow)
 app.use(patchDeliver)
+app.use(patchReturn)
+app.use(patchUserRole)
+app.use(deleteUser)
+app.use(deleteBlogPostData)
+app.use(postAuthorTalksData)
+app.use(getAuthorTalksData)
 
 app.use(testFol)
 

@@ -9,7 +9,8 @@ const borrowBookSchema = new Schema({
     borrower_email: {type: String},
     borrower_name:{type: String},
     borrow_status: {type: Boolean},
-    delivered_status: {type: Boolean}
+    delivered_status: {type: Boolean},
+    returned_status: {type: Boolean},
 
 
     
