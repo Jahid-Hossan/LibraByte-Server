@@ -32,6 +32,9 @@ const getBorrowBooks = require('./src/routes/borrow/getBorrow/index')
 const patchBorrow = require('./src/routes/borrow/patchBorrow/index')
 const patchDeliver = require('./src/routes/borrow/patchDeliver/patchDeliver')
 const testFol = require('./src/routes/testFol/index')
+const postwish=require('./src/routes/wishlist/postWishlist/index')
+const getwish=require('./src/routes/wishlist/getWishlist/index')
+const removeWish=require('./src/routes/wishlist/deleteWishlist/index')
 const patchReturn = require('./src/routes/borrow/pathcReturn/index')
 const patchUserRole = require('./src/routes/users/updateUserRole/index')
 const deleteUser = require('./src/routes/users/deleteUser/index')
@@ -60,6 +63,9 @@ app.use(postAuthorTalksData)
 app.use(getAuthorTalksData)
 
 app.use(testFol)
+app.use(postwish)
+app.use(getwish)
+app.use(removeWish)
 
 //*****Error handling *****//
 
