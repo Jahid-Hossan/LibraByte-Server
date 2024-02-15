@@ -14,7 +14,7 @@ const postBorrow = async (req, res) => {
             // Product already exists, send an appropriate response
             return res.status(409).send({ error: 'Product already exists' });
         }
-
+// console.log(req.body)
         // Product doesn't exist, create a new one
         const result = await borrowCollection.create(req.body);
         res.send(result);

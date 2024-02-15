@@ -32,8 +32,9 @@ const getBorrowBooks = require('./src/routes/borrow/getBorrow/index')
 const patchBorrow = require('./src/routes/borrow/patchBorrow/index')
 const patchDeliver = require('./src/routes/borrow/patchDeliver/patchDeliver')
 const testFol = require('./src/routes/testFol/index')
-
-
+const postwish=require('./src/routes/wishlist/postWishlist/index')
+const getwish=require('./src/routes/wishlist/getWishlist/index')
+const removeWish=require('./src/routes/wishlist/deleteWishlist/index')
 app.use(createUsers);
 app.use(findUsers);
 app.use(getBooks);
@@ -46,8 +47,10 @@ app.use(borrowBooks);
 app.use(getBorrowBooks);
 app.use(patchBorrow)
 app.use(patchDeliver)
-
 app.use(testFol)
+app.use(postwish)
+app.use(getwish)
+app.use(removeWish)
 
 //*****Error handling *****//
 
