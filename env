@@ -1,0 +1,12 @@
+DB_USER=LibraByte-Admin
+DB_PASS=FUOqX4aNRbcLEfgX
+
+DB_URI=mongodb+srv://LibraByte-Admin:FUOqX4aNRbcLEfgX@cluster0.shpjug3.mongodb.net/?retryWrites=true&w=majority
+
+DB_NAME=LibraByte
+
+STRIPE_SECRET_KEY=sk_test_51OHNA9ATf1pnUeXkx8YE7wy6BXGH27B5mSwjHD7yiywffyr6Sv7z5qH4X9TECAff3rDHAeD9Z7AxxCqT9J1b2VA1004JRt705S
+
+ACCESS_TOKEN=43458f7fc2a76b8c962f8cd82e3c60320587aba1e1209a907348eee91b60279d6c5e525021b1225089124d4e094e7416135d3aff164f396144ec6dd584d9bb5e
+
+
