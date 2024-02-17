@@ -3,6 +3,9 @@ const app = express();
 const cors = require("cors");
 const port = 5000;
 const connectDB = require("./src/db/connectDB");
+const multer  = require('multer')
+
+
 
 require("dotenv").config();
 
@@ -16,6 +19,47 @@ app.use(
     })
 );
 app.use(express.json());
+
+app.use('/uploads', express.static('uploads'))
+
+/* multer */
+
+/* ---------------------------------- books pdf uploading ------------------------- */
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now()
+      cb(null,  uniqueSuffix+file.originalname)
+    }
+  })
+
+  const bookPdfSchema = require('./src/models/books/booksPdfSchema')
+   
+  
+  const upload = multer({ storage: storage })
+
+  app.post('/upload-files', upload.single('file'), async(req, res) => {
+    // console.log(req.file);
+    
+    // console.log(bookId);
+    // console.log(pdfFile);
+    const bookId = req.body.bookId
+    const pdfFile = req.file.filename
+
+    try {
+        await bookPdfSchema.create({bookId: bookId, pdfFile: pdfFile})
+        res.send({status: "ok"})
+    }
+    catch(error) {
+        res.json({status: error})
+    }
+    
+  })
+
+  /* --------------------- books pdf uploading done ------------------------- */
 
 
 
@@ -42,7 +86,9 @@ const patchUserRole = require('./src/routes/users/updateUserRole/index')
 const deleteUser = require('./src/routes/users/deleteUser/index')
 const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
 const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
-const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
+const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index');
+const getBooksPdf = require('./src/routes/booksPdf/getBooksPdf/index')
+// const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
 
 app.use(createUsers);
@@ -63,11 +109,15 @@ app.use(deleteUser)
 app.use(deleteBlogPostData)
 app.use(postAuthorTalksData)
 app.use(getAuthorTalksData)
-
-app.use(testFol)
 app.use(postwish)
 app.use(getwish)
 app.use(removeWish)
+app.use (getBooksPdf)
+// app.use(postBooksPdf)
+
+app.use(testFol)
+
+
 
 //*****Error handling *****//
 
