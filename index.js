@@ -89,6 +89,8 @@ const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/in
 const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index');
 const getBooksPdf = require('./src/routes/booksPdf/getBooksPdf/index')
 const getSubscription = require('./src/routes/subscription/getSubscription/index')
+const postComplains = require('./src/routes/complains/postComplains/index')
+
 
 // const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
@@ -116,6 +118,7 @@ app.use(getwish)
 app.use(removeWish)
 app.use (getBooksPdf)
 app.use(getSubscription)
+app.use(postComplains)
 
 // app.use(postBooksPdf)
 
