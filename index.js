@@ -86,7 +86,8 @@ const patchUserRole = require('./src/routes/users/updateUserRole/index')
 const deleteUser = require('./src/routes/users/deleteUser/index')
 const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
 const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
-const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index');
+const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
+const postTransaction=require('./src/routes/transaction/postTransaction/index')
 const getBooksPdf = require('./src/routes/booksPdf/getBooksPdf/index')
 const getSubscription = require('./src/routes/subscription/getSubscription/index')
 
@@ -123,6 +124,7 @@ app.use(testFol)
 
 
 
+app.use(postTransaction)
 //*****Error handling *****//
 
 app.get("/", (req, res) => {
