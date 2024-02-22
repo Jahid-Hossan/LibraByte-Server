@@ -41,7 +41,7 @@ const deleteUser = require('./src/routes/users/deleteUser/index')
 const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
 const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
 const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
-
+const postTransaction=require('./src/routes/transaction/postTransaction/index')
 
 app.use(createUsers);
 app.use(findUsers);
@@ -67,6 +67,7 @@ app.use(postwish)
 app.use(getwish)
 app.use(removeWish)
 
+app.use(postTransaction)
 //*****Error handling *****//
 
 app.get("/", (req, res) => {
