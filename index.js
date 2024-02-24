@@ -88,9 +88,10 @@ const deleteBlogPostData = require('./src/routes/blogPost/deleteBlogPost/index')
 const postAuthorTalksData = require('./src/routes/authorTalks/postAuthorTalks/index')
 const getAuthorTalksData = require('./src/routes/authorTalks/getAuthorPost/index')
 const postTransaction=require('./src/routes/transaction/postTransaction/index')
+const getTransaction=require('./src/routes/transaction/getTransaction/index')
+const patchBorrowLimit=require('./src/routes/transaction/patchBorrowLimit/index')
 const getBooksPdf = require('./src/routes/booksPdf/getBooksPdf/index')
 const getSubscription = require('./src/routes/subscription/getSubscription/index')
-
 // const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
 
@@ -125,6 +126,8 @@ app.use(testFol)
 
 
 app.use(postTransaction)
+app.use(getTransaction)
+app.use(patchBorrowLimit)
 //*****Error handling *****//
 
 app.get("/", (req, res) => {
