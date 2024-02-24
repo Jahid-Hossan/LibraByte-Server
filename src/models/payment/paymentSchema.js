@@ -8,7 +8,7 @@ const paymentSchema = new Schema({
     paymentDate:{type: String} ,
     userEmail: {type: String}, 
     subscription: {type: String}, 
-    borrow_limit: {type: String},   
+    borrow_limit: {type: Number},   
 })
 
 
