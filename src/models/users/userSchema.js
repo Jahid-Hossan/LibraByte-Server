@@ -6,7 +6,9 @@ const userSchema = new Schema(
         "name": "string",
         "email": "string",
         "role": "string",
-        "subscription": "string"
+        "author": "string",
+        "subscription": "string",
+        "date": "string"
     }
 )
 

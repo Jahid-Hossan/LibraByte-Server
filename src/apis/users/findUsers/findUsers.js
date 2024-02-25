@@ -1,5 +1,6 @@
 const userCollections = require("../../../models/users/userSchema")
 
+// console.log(userCollections)
 
 const findUsers = async (req, res) => {
     try {
