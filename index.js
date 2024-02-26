@@ -92,6 +92,12 @@ const getTransaction=require('./src/routes/transaction/getTransaction/index')
 const patchBorrowLimit=require('./src/routes/transaction/patchBorrowLimit/index')
 const getBooksPdf = require('./src/routes/booksPdf/getBooksPdf/index')
 const getSubscription = require('./src/routes/subscription/getSubscription/index')
+const postComplains = require('./src/routes/complains/postComplains/index')
+const getComplains = require('./src/routes/complains/getComplains/index')
+const postReviews = require('./src/routes/reviews/postReviews/index')
+const getReviews = require('./src/routes/reviews/getReviews/index')
+
+
 const postBooks = require('./src/routes/postBooks/index')
 
 // const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
@@ -121,6 +127,10 @@ app.use(removeWish)
 app.use (getBooksPdf)
 app.use(getSubscription)
 app.use(postBooks)
+app.use(postComplains)
+app.use(getComplains)
+app.use(postReviews)
+app.use(getReviews)
 
 // app.use(postBooksPdf)
 
