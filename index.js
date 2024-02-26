@@ -4,7 +4,7 @@ const cors = require("cors");
 const port = 5000;
 const connectDB = require("./src/db/connectDB");
 const multer  = require('multer')
-
+const bodyParser = require('body-parser');
 
 
 require("dotenv").config();
@@ -18,9 +18,16 @@ app.use(
         ],
     })
 );
-app.use(express.json());
 
+
+
+
+app.use(bodyParser.json({limit: '1024mb'}));
+app.use(bodyParser.urlencoded({limit: '1024mb', extended: true}));
+
+app.use(express.json());
 app.use('/uploads', express.static('uploads'))
+
 
 /* multer */
 
