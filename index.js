@@ -106,6 +106,8 @@ const getReviews = require('./src/routes/reviews/getReviews/index')
 
 const postBooks = require('./src/routes/postBooks/index')
 
+const postDonation=require('./src/routes/donation/postDonation/index')
+const getDonation=require('./src/routes/donation/getDonation/index')
 // const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
 
@@ -147,6 +149,9 @@ app.use(testFol)
 app.use(postTransaction)
 app.use(getTransaction)
 app.use(patchBorrowLimit)
+
+app.use(postDonation)
+app.use(getDonation)
 //*****Error handling *****//
 
 app.get("/", (req, res) => {
