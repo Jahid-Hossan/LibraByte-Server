@@ -8,6 +8,6 @@ const complainSchema = new Schema({
     complain: { type: String },
 })
 
-const complainCollections = model("complain", complainSchema)
+const complainCollections = model("complains", complainSchema)
 
 module.exports = complainCollections
