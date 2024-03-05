@@ -103,6 +103,8 @@ const getComplains = require('./src/routes/complains/getComplains/index')
 const postReviews = require('./src/routes/reviews/postReviews/index')
 const getReviews = require('./src/routes/reviews/getReviews/index')
 
+const postBookPdf = require('./src/routes/booksPdf/postPdfBooks/index')
+
 
 const postBooks = require('./src/routes/postBooks/index')
 
@@ -139,6 +141,7 @@ app.use(postComplains)
 app.use(getComplains)
 app.use(postReviews)
 app.use(getReviews)
+app.use(postBookPdf)
 
 // app.use(postBooksPdf)
 

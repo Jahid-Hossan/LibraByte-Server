@@ -18,3 +18,11 @@
 // router.post('/upload-files', upload.single('file'), postBlogPost)
 
 // module.exports = router
+
+const express = require('express')
+const router = express.Router()
+const postBooksPdf = require('../../../apis/books/postBookPdf/postBookPdf')
+
+router.post('/booksPdf/v1', postBooksPdf)
+
+module.exports = router
