@@ -102,6 +102,7 @@ const postComplains = require('./src/routes/complains/postComplains/index')
 const getComplains = require('./src/routes/complains/getComplains/index')
 const postReviews = require('./src/routes/reviews/postReviews/index')
 const getReviews = require('./src/routes/reviews/getReviews/index')
+const getNewArrivals = require('./src/routes/newArrivals/getNewArrivals/index')
 
 const postBookPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
@@ -142,6 +143,7 @@ app.use(getComplains)
 app.use(postReviews)
 app.use(getReviews)
 app.use(postBookPdf)
+app.use(getNewArrivals)
 
 // app.use(postBooksPdf)
 
