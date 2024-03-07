@@ -111,6 +111,7 @@ const postBooks = require('./src/routes/postBooks/index')
 
 const postDonation=require('./src/routes/donation/postDonation/index')
 const getDonation=require('./src/routes/donation/getDonation/index')
+const patchDonation=require("./src/routes/donation/patchDonation/index")
 // const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
 
@@ -157,6 +158,7 @@ app.use(patchBorrowLimit)
 
 app.use(postDonation)
 app.use(getDonation)
+app.use(patchDonation)
 //*****Error handling *****//
 
 app.get("/", (req, res) => {
