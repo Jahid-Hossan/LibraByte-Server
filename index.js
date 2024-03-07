@@ -4,7 +4,7 @@ const cors = require("cors");
 const port = 5000;
 const connectDB = require("./src/db/connectDB");
 const multer  = require('multer')
-
+const bodyParser = require('body-parser');
 
 
 require("dotenv").config();
@@ -18,9 +18,15 @@ app.use(
         ],
     })
 );
-app.use(express.json());
 
+
+
+app.use(bodyParser.json({limit: '1024mb'}));
+app.use(bodyParser.urlencoded({limit: '1024mb', extended: true}));
+
+app.use(express.json());
 app.use('/uploads', express.static('uploads'))
+
 
 /* multer */
 
@@ -92,6 +98,19 @@ const getTransaction=require('./src/routes/transaction/getTransaction/index')
 const patchBorrowLimit=require('./src/routes/transaction/patchBorrowLimit/index')
 const getBooksPdf = require('./src/routes/booksPdf/getBooksPdf/index')
 const getSubscription = require('./src/routes/subscription/getSubscription/index')
+const postComplains = require('./src/routes/complains/postComplains/index')
+const getComplains = require('./src/routes/complains/getComplains/index')
+const postReviews = require('./src/routes/reviews/postReviews/index')
+const getReviews = require('./src/routes/reviews/getReviews/index')
+const getNewArrivals = require('./src/routes/newArrivals/getNewArrivals/index')
+
+const postBookPdf = require('./src/routes/booksPdf/postPdfBooks/index')
+
+
+const postBooks = require('./src/routes/postBooks/index')
+
+const postDonation=require('./src/routes/donation/postDonation/index')
+const getDonation=require('./src/routes/donation/getDonation/index')
 // const postBooksPdf = require('./src/routes/booksPdf/postPdfBooks/index')
 
 
@@ -118,6 +137,13 @@ app.use(getwish)
 app.use(removeWish)
 app.use (getBooksPdf)
 app.use(getSubscription)
+app.use(postBooks)
+app.use(postComplains)
+app.use(getComplains)
+app.use(postReviews)
+app.use(getReviews)
+app.use(postBookPdf)
+app.use(getNewArrivals)
 
 // app.use(postBooksPdf)
 
@@ -128,6 +154,9 @@ app.use(testFol)
 app.use(postTransaction)
 app.use(getTransaction)
 app.use(patchBorrowLimit)
+
+app.use(postDonation)
+app.use(getDonation)
 //*****Error handling *****//
 
 app.get("/", (req, res) => {

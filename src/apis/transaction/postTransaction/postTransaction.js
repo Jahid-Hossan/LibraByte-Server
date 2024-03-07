@@ -35,7 +35,7 @@ const scheduleSubscriptionUpdate = async (userEmail, days) => {
                 { email: userEmail },
                 { $set: { subscription: "free" } }
             );
-            console.log(`Subscription status updated to 'free' for user ${userEmail} after ${days} days.`);
+            // console.log(`Subscription status updated to 'free' for user ${userEmail} after ${days} days.`);
         }, days * 24 * 60 * 60 * 1000); 
     } catch(error) {
         console.log(error);
