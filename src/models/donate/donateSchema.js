@@ -10,7 +10,9 @@ const donateSchema = new Schema({
     name: {type: String} ,
     email: {type: String} ,
     note: {type: String} ,
-    photo:{type: String}   
+    photo:{type: String},
+    isAccept:{type: Boolean},
+    isRemove:{type: Boolean}   
 })
 
 
