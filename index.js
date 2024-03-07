@@ -101,10 +101,16 @@ const getSubscription = require('./src/routes/subscription/getSubscription/index
 const postComplains = require('./src/routes/complains/postComplains/index')
 const getComplains = require('./src/routes/complains/getComplains/index')
 const postReviews = require('./src/routes/reviews/postReviews/index')
+<<<<<<< HEAD
+const getReviews = require('./src/routes/reviews/getReviews/index');
+const getNewArrivals = require("./src/routes/newArrivals/getNewArrivals/index");
+const patchComplains = require("./src/routes/complains/patchComplains/index");
+=======
 const getReviews = require('./src/routes/reviews/getReviews/index')
 const getNewArrivals = require('./src/routes/newArrivals/getNewArrivals/index')
 
 const postBookPdf = require('./src/routes/booksPdf/postPdfBooks/index')
+>>>>>>> 3ec7fa9a09655e6d3e39a23fd52f744af161b97b
 
 
 const postBooks = require('./src/routes/postBooks/index')
@@ -142,8 +148,13 @@ app.use(postComplains)
 app.use(getComplains)
 app.use(postReviews)
 app.use(getReviews)
+<<<<<<< HEAD
+app.use(getNewArrivals)
+app.use(patchComplains)
+=======
 app.use(postBookPdf)
 app.use(getNewArrivals)
+>>>>>>> 3ec7fa9a09655e6d3e39a23fd52f744af161b97b
 
 // app.use(postBooksPdf)
 
